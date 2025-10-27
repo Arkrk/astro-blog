@@ -1,6 +1,7 @@
 media:
   input: public
   output: /
+  label: 画像
 content:
   - name: posts
     label: 記事
