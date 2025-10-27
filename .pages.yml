@@ -3,28 +3,28 @@ media:
   output: /
 content:
   - name: posts
-    label: Posts
+    label: 記事
     type: collection
     path: src/content/blog
     view:
       fields: [ title, draft, date ]
     fields:
-      - { name: author, label: Author, type: string }
-      - { name: pubDatetime, label: Date, type: date }
-      - { name: modDatetime, label: Date, type: date }
-      - { name: title, label: Title, type: string, required: true }
-      - { name: ogImage, label: Title, type: string }
+      - { name: author, label: 著者, type: string }
+      - { name: pubDatetime, label: 公開日時, type: date }
+      - { name: modDatetime, label: 更新日時, type: date }
+      - { name: title, label: タイトル, type: string, required: true }
+      - { name: ogImage, label: OGP画像, type: string }
       - { name: slug, label: Slug, type: string }
       - { name: featured, label: Featured, type: boolean }
-      - { name: draft, label: Draft, type: boolean }
-      - { name: tags, label: Tags, type: string, list: true }
-      - { name: description, label: Description, type: string }
-      - { name: body, label: Body, type: rich-text }
+      - { name: draft, label: 下書き, type: boolean }
+      - { name: tags, label: タグ, type: string, list: true }
+      - { name: description, label: 説明, type: string }
+      - { name: body, label: 本文, type: rich-text }
   - name: about
-    label: About page
+    label: About ページ
     type: file
     path: src/pages/about.md
     fields:
       - { name: layout, type: string, hidden: true, default: "../layouts/AboutLayout.astro" }
-      - { name: title, label: Title, type: string }
-      - { name: body, label: Body, type: rich-text, options: { input: public/assets, output: /assets } }
+      - { name: title, label: タイトル, type: string }
+      - { name: body, label: 本文, type: rich-text, options: { input: public/assets, output: /assets } }
