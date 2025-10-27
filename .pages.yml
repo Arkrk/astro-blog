@@ -11,8 +11,8 @@ content:
       fields: [ title, draft, date ]
     fields:
       - { name: author, label: 著者, type: string }
-      - { name: pubDatetime, label: 公開日時, type: date }
-      - { name: modDatetime, label: 更新日時, type: date }
+      - { name: pubDatetime, label: 公開日時, type: date, options: { time: true, format: yyyy/MM/dd'T'HH:mm:ss'+09:00'} }
+      - { name: modDatetime, label: 更新日時, type: date, options: { time: true, format: yyyy/MM/dd'T'HH:mm:ss'+09:00'} }
       - { name: title, label: タイトル, type: string, required: true }
       - { name: ogImage, label: OGP画像, type: string }
       - { name: slug, label: Slug, type: string }
